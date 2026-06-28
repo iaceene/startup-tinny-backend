@@ -1,9 +1,6 @@
 import Server from "tinny-backend";
+import CreateServer from "../lib/CreateSrv.js";
 
+const srv = CreateServer(true, 3000);
 
-const app = new Server({})
-
-app.servDir("./public/default/", "/")
-app.servDir("./public/docs/", "/docs")
-
-app.listen()
+srv.listen()
